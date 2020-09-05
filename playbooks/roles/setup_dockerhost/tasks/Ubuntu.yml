@@ -1,0 +1,4 @@
+---
+- name: import focal tasks
+  import_tasks: 'Ubuntu/focal.yml'
+  when: ansible_facts.distribution_release == 'focal'

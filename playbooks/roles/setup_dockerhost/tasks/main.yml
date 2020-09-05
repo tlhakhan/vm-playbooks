@@ -1,0 +1,10 @@
+---
+- name: Switch on distro for docker install
+  import_tasks: Ubuntu.yml
+  when: ansible_facts.distribution == 'Ubuntu'
+
+- name: Send over daemon.json
+  copy:
+    src: daemon.json
+    dest: /etc/docker/daemon.json
+  notify: restart docker service

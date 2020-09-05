@@ -1,0 +1,2 @@
+[virtual_machines]
+dev-01 ansible_ssh_user=ubuntu

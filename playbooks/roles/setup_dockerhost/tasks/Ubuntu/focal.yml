@@ -1,0 +1,19 @@
+---
+- name: install docker pre-reqs packages
+  apt:
+    name: '{{ item }}'
+    state: present
+  loop:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg-agent
+    - software-properties-common
+
+- name: install docker packages
+  apt:
+    name: '{{ item }}'
+    state: present
+  loop:
+    - docker.io
+    - docker-compose

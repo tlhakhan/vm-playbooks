@@ -1,0 +1,8 @@
+---
+version: '3'
+services:
+  ansible:
+    image: repo.home.local/tlhakhan/app/ansible:latest
+    volumes:
+      - ./ssh:/root/.ssh:ro
+      - ./playbooks:/playbooks

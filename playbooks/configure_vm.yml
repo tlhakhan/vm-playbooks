@@ -1,0 +1,7 @@
+---
+- name: Configure virtual machine
+  gather_facts: True
+  become: True
+  hosts: virtual_machines
+  roles:
+    - name: setup_dockerhost
